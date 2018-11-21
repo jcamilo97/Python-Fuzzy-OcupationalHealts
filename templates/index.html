@@ -1,0 +1,62 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<h4> {{ title }}</h4>
+{% from "_macro.html" import render_field %}
+<form method="POST" id="formriesgos">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                variable
+            </div>
+            <div class="col">
+                valor
+            </div>
+            <div class="col">
+                nivel de expocision
+            </div>
+            <div class="col">
+                nivel de consecuencia
+            </div>
+        </div>
+
+        {% for var in variables %}
+        <div class="row">
+            <div class="col-sm" style="margin-top: 15px">
+                <label>{{ var.name}}</label>
+            </div>
+            <div class="col-sm">
+                <input name="{{var.name}}" id="{{var.name}}" value="" type="text">
+            </div>
+            <div class="col-sm">
+                <select name="nv_exp_{{var.name}}" class="selectpicker form-control">
+                    {% for o in nvexpo %}
+                    <option value="{{ o.value }}">{{ o.value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-sm">
+                <select name="nv_cons_{{var.name}}" class="selectpicker form-control">
+                    {% for o in nvcons %}
+                    <option value="{{ o.value }}">{{ o.value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="row align-items-center">
+            <div class="col align-self-center">
+                <button type="submit" style="width: 100px" class="btn btn-primary">enviar</button>
+            </div>
+
+        </div>
+    </div>
+</form>
+<div>
+    {% if showresul %}
+    {% for r in result %}
+       <div>{{r.name}}</div>
+       <div>{{r.val}}</div>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
