@@ -15,7 +15,7 @@
        > tutorial-env\Scripts\activate.bat
 3. Install requeriments.txt for download pacakages needs
    ```bash
-   (your-env) $ pip freeze > requirements.txt
+   (your-env) $ pip install -r requirements.txt
    ```
 4. run
   ```
