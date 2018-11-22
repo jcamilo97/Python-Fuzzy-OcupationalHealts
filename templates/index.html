@@ -22,7 +22,7 @@
         {% for var in variables %}
         <div class="row">
             <div class="col-sm" style="margin-top: 15px">
-                <label>{{ var.name}}</label>
+                <label>{{ var.name}}-{{ var.mag}}</label>
             </div>
             <div class="col-sm">
                 <input name="{{var.name}}" id="{{var.name}}" value="" type="text">
@@ -43,6 +43,34 @@
             </div>
         </div>
         {% endfor %}
+        <div class="row">
+            <div class="col">
+                <span>Biologicos</span>
+            </div>
+            <div class="col">
+                <input name="biologicos" id="biologicos" value="">
+            </div>
+            <div class="col">
+
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span>Biologicos</span>
+            </div>
+            <div class="col">
+                <input name="biologicos" id="biologicos" value="">
+            </div>
+            <div class="col">
+    
+            </div>
+            <div class="col">
+    
+            </div>
+        </div>
         <button type="submit" style="width: 300px" class="btn btn-primary button center">enviar</button>
     </div>
 </form>
@@ -50,10 +78,10 @@
     {% if showresul %}
     <h4 class="center">Resultado</h4>
     {% for r in result %}
-       <div>
-            <span>{{r.name}}</span>
-            <div style="display:inline-block">{{r.val}}</div>
-       </div>
+    <div>
+        <span>{{r.name}}</span>
+        <div style="display:inline-block" class="s {{r.val}}">{{r.val}}</div>
+    </div>
     {% endfor %}
     {% endif %}
 </div>

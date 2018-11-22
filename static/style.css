@@ -19,5 +19,15 @@ body{
     margin-left: 300px;
     align-self:center;
     border-radius: 15px;
-    background: #3ecbcb;
+    /*background: #3ecbcb;*/
+}
+.s{
+    margin: 10px; 
+    
+}
+.s.ACEPTABLE{
+    background-color: green;
+}
+.s.NO.ACEPTABLE{
+    background-color: red
 }

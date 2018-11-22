@@ -64,10 +64,10 @@ def cal_acept_riesgo(riesgo):
 app = Flask(__name__)
 
 variables = [
-    {'name':'ruido'},
-    {'name': 'radiacionesonz'},
-    {'name': 'iluminacion'},
-    {'name': 'temperatura'}
+    {'name':'ruido', 'mag': 'Decibeles'},
+    {'name': 'radiacionesonz', 'mag':'rem (J/kg)'},
+    {'name': 'iluminacion', 'mag': 'Lux= 1 Lumen x M2'},
+    {'name': 'temperatura', 'mag':'grados centrigrados'}
 ]
 
 @app.route("/fuzzy", methods=['GET', 'POST'])
