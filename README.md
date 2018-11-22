@@ -1,5 +1,7 @@
 # Python-Fuzzy-OcupationalHealts
 
+Project using fuzzy logic with python and [skfuzzy](https://pythonhosted.org/scikit-fuzzy/)
+
 # Requeriments
 - python >= 3.6
 
