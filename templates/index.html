@@ -6,16 +6,16 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                variable
+                <h4>variable</h4>
             </div>
             <div class="col">
-                valor
+                <h4>valor</h4>
             </div>
             <div class="col">
-                nivel de expocision
+                <h4>nivel de expocision</h4>
             </div>
             <div class="col">
-                nivel de consecuencia
+                <h4>nivel de consecuencia</h4>
             </div>
         </div>
 
@@ -24,8 +24,8 @@
             <div class="col-sm" style="margin-top: 15px">
                 <label>{{ var.name}}-{{ var.mag}}</label>
             </div>
-            <div class="col-sm">
-                <input name="{{var.name}}" id="{{var.name}}" value="" type="text">
+            <div class="col-sm form-group">
+                <input name="{{var.name}}" id="{{var.name}}"  class="form-control"  value="" type="text">
             </div>
             <div class="col-sm">
                 <select name="nv_exp_{{var.name}}" class="selectpicker form-control">
@@ -44,31 +44,49 @@
         </div>
         {% endfor %}
         <div class="row">
-            <div class="col">
-                <span>Biologicos</span>
-            </div>
-            <div class="col">
-                <input name="biologicos" id="biologicos" value="">
-            </div>
-            <div class="col">
-
-            </div>
-            <div class="col">
-
+            <div class="col-sm" style="margin-top: 15px">
+                <h3>Filtros</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <span>Biologicos</span>
+            <div class="col-sm" style="margin-top: 15px">
+                <span>Posturas ergonomicas</span>
             </div>
             <div class="col">
-                <input name="biologicos" id="biologicos" value="">
+                <select name="Posturas" id="Posturas"  class="selectpicker form-control">
+                    <option value="5">buena</option>
+                    <option value="3">regular</option>
+                    <option value="1">mala</option>
+                </select>
             </div>
             <div class="col">
-    
+                <select name="nv_exp_postura" class="selectpicker form-control">
+                    {% for o in nvexpo %}
+                    <option value="{{ o.value }}">{{ o.value }}</option>
+                    {% endfor %}
+                </select>
             </div>
             <div class="col">
-    
+                <select name="nv_cons_postura" class="selectpicker form-control">
+                    {% for o in nvcons %}
+                    <option value="{{ o.value }}">{{ o.value }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm" style="margin-top: 15px">
+                <span>Biologicos-ufc/m3</span>
+            </div>
+            <div class="col form-group">
+                <input name="biologicos" id="biologicos" class="form-control" value="">
+            </div>
+            <div class="col">
+
+            </div>
+            <div class="col">
+
             </div>
         </div>
         <button type="submit" style="width: 300px" class="btn btn-primary button center">enviar</button>
