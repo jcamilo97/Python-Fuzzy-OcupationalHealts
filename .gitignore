@@ -1,2 +1,10 @@
+#virualenv
 /venvfuzzy
 
+#dotenv
+.env
+#untraked
+/__pychache__
+__pychache__
+./__pychache__ 
+*.cpython-36.pyc
