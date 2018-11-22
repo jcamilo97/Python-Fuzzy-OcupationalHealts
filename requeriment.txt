@@ -1,0 +1,15 @@
+Click==7.0
+decorator==4.3.0
+Flask==1.0.2
+Flask-WTF==0.14.2
+itsdangerous==1.1.0
+Jinja2==2.10
+MarkupSafe==1.1.0
+networkx==2.2
+numpy==1.15.4
+pkg-resources==0.0.0
+python-dotenv==0.9.1
+scikit-fuzzy==0.4.0
+scipy==1.1.0
+Werkzeug==0.14.1
+WTForms==2.2.1
